@@ -31,7 +31,7 @@ def save_to_gsheet(data):
 
     conn.update(
         data=df,
-        worksheet="Alle",
+        worksheet="Marlene",
     )
 
 np.asscalar = lambda x: x.item()
@@ -41,7 +41,7 @@ st.set_option("client.showErrorDetails", False)
 
 st.set_page_config(layout="wide")
 
-st.title("Das große Häkelrunden Farb-Duell")
+st.title("Marlenes Lieblingsfarbe 🐘")
 
 show_name = st.checkbox("Farbname anzeigen", value=True)
 FILTER_FILE = "filtered_colors.json"
@@ -112,7 +112,7 @@ FILE = "votes.json"
 # else:
 #     data = {}
 data = {}
-df = conn.read(ttl=0,worksheet="Alle", )
+df = conn.read(ttl=0,worksheet="Marlene", )
 # st.write(df.columns)
 # st.write(df.head())
 # st.write(df)
